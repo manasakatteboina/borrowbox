@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Borrow Box | Share. Borrow. Save.</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav><div class="logo">Borrow<span>Box</span></div>
+<div class="navlinks"><a href="#browse">Browse</a><a href="#add">Lend an Item</a><a href="#dashboard">Dashboard</a><button id="logout" class="ghost hidden">Logout</button></div></nav>
+
+<header class="hero"><div class="hero-inner">
+<div class="pill">🎒 Student Sharing Platform</div>
+<h1>Borrow what you need.<br><span>Share what you have.</span></h1>
+<p>Borrow Box helps students share useful items instead of buying something they only need for a short time.</p>
+<a href="#browse" class="btn">Explore Items →</a>
+</div></header>
+
+<main>
+<section id="auth" class="card auth">
+<div><h2>Join Borrow Box</h2><p>Create an account to lend items and send borrow requests.</p></div>
+<div class="auth-grid">
+<form id="register"><h3>Create account</h3><input name="username" placeholder="Username" required><input name="password" type="password" placeholder="Password" required><button class="btn">Register</button></form>
+<form id="login"><h3>Login</h3><input name="username" placeholder="Username" required><input name="password" type="password" placeholder="Password" required><button class="btn">Login</button></form>
+</div></section>
+
+<section id="browse"><div class="section-head"><div><div class="pill">Available now</div><h2>Browse Borrow Box</h2></div>
+<div class="filters"><input id="search" placeholder="Search items..."><select id="category"><option value="all">All categories</option><option>Books</option><option>Electronics</option><option>Stationery</option><option>Sports</option><option>Other</option></select></div></div>
+<div id="items" class="cards"></div></section>
+
+<section id="add" class="card hidden"><h2>Lend an Item</h2><p>Add something another student could borrow.</p>
+<form id="addItem" class="add-form"><input name="title" placeholder="Item name e.g. Scientific Calculator" required>
+<select name="category"><option>Books</option><option>Electronics</option><option>Stationery</option><option>Sports</option><option>Other</option></select>
+<textarea name="description" placeholder="Describe the item, condition, pickup details..."></textarea><button class="btn">List Item</button></form></section>
+
+<section id="dashboard" class="hidden"><div class="section-head"><div><div class="pill">My activity</div><h2>Dashboard</h2></div></div>
+<div class="dashgrid"><div class="card"><h3>📦 My Items</h3><div id="myItems"></div></div>
+<div class="card"><h3>📨 Borrow Requests</h3><div id="requests"></div></div>
+<div class="card"><h3>🔖 My Borrow Requests</h3><div id="myBorrows"></div></div></div></section>
+</main>
+<footer><b>BorrowBox</b> — Share more. Spend less. ♻️</footer>
+<script src="/static/script.js"></script>
+</body></html>

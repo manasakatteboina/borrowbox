@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+borrow_box.db
+*.db
+.env
+.venv/
+venv/
+.vscode/
+.idea/
